@@ -181,7 +181,6 @@
 		32CF274824A1269D0049761E /* iYoga */ = {
 			isa = PBXGroup;
 			children = (
-				32C2B7E424AB611C002F2064 /* Images */,
 				32CF275924A1269F0049761E /* Info.plist */,
 				32CF275424A1269F0049761E /* Assets.xcassets */,
 				32CF274924A1269D0049761E /* AppDelegate.swift */,
@@ -190,6 +189,8 @@
 				32CF275124A1269D0049761E /* Main.storyboard */,
 				32CF275624A1269F0049761E /* LaunchScreen.storyboard */,
 				32D4FABC24A38A04006D9B96 /* ViewController */,
+				3211C13124AB3682006EF20F /* Views */,
+				32C2B7E424AB611C002F2064 /* Images */,
 				3211C10D24AB0F96006EF20F /* Fonts */,
 				32D4FAB824A3821E006D9B96 /* Utils */,
 			);
@@ -217,7 +218,6 @@
 		32D4FAB824A3821E006D9B96 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3211C13124AB3682006EF20F /* Views */,
 				32D4FAB924A3823B006D9B96 /* AppColors.swift */,
 			);
 			path = Utils;
