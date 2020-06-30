@@ -15,6 +15,7 @@ class BottomSideRoundView: UIView {
     
     private func addShape() {
         let shapeLayer = CAShapeLayer()
+        
         // 1. Create Path to make Top-Left and Top-Right Curved.
         shapeLayer.path = createPath()
         
@@ -45,20 +46,26 @@ class BottomSideRoundView: UIView {
         let width: CGFloat = self.frame.width
         let path = UIBezierPath()
 
+        // 1. Initiate Path Point to Top-Left Corner and draw Straight line to the Top-right
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: width, y: 0))
-        path.addLine(to: CGPoint(x: width,
-                                 y: height-30))
+        // 2. Draw Line from Top-Right to Bottom Right with offset of 30point.
+        path.addLine(to: CGPoint(x: width, y: height-30))
+        
+        // 3. Draw Curve from Offset Vertical Point to offset Horizontal Point.
         path.addCurve(to: CGPoint(x: width-30, y: height),
                       controlPoint1: CGPoint(x: width, y: height-30),
                       controlPoint2: CGPoint(x: width, y: height))
         
+        // 4. Draw Straight line till offset of Horizontal 30point.
         path.addLine(to: CGPoint(x: 0+30, y: height))
 
+        // 5. Draw a curve from Horizontal offset to the Vertical Offset of 30 point.
         path.addCurve(to: CGPoint(x: 0, y: height-30),
                       controlPoint1: CGPoint(x: 0+30, y:height),
                       controlPoint2: CGPoint(x: 0, y: height))
 
+        // 6. Close the Path and return it to calling method.
         path.close()
 
         return path.cgPath
