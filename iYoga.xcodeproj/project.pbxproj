@@ -13,6 +13,7 @@
 		3211C12924AB1245006EF20F /* UbuntuMono-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3211C12524AB1245006EF20F /* UbuntuMono-B.ttf */; };
 		3211C12B24AB13F3006EF20F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211C12A24AB13F3006EF20F /* StartViewController.swift */; };
 		3211C12D24AB34E7006EF20F /* TopSideRoundTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211C12C24AB34E7006EF20F /* TopSideRoundTabBar.swift */; };
+		32B5319924C1C10E00243056 /* YogaUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5319824C1C10E00243056 /* YogaUIViewController.swift */; };
 		32C2B7DA24AB5E6E002F2064 /* Ubuntu-C.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D024AB5E6D002F2064 /* Ubuntu-C.ttf */; };
 		32C2B7DB24AB5E6E002F2064 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D124AB5E6D002F2064 /* Ubuntu-M.ttf */; };
 		32C2B7DC24AB5E6E002F2064 /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D224AB5E6D002F2064 /* Ubuntu-MI.ttf */; };
@@ -63,6 +64,7 @@
 		3211C12524AB1245006EF20F /* UbuntuMono-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-B.ttf"; sourceTree = "<group>"; };
 		3211C12A24AB13F3006EF20F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3211C12C24AB34E7006EF20F /* TopSideRoundTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSideRoundTabBar.swift; sourceTree = "<group>"; };
+		32B5319824C1C10E00243056 /* YogaUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaUIViewController.swift; sourceTree = "<group>"; };
 		32C2B7D024AB5E6D002F2064 /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-C.ttf"; sourceTree = "<group>"; };
 		32C2B7D124AB5E6D002F2064 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		32C2B7D224AB5E6D002F2064 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
@@ -226,9 +228,10 @@
 		32D4FABC24A38A04006D9B96 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				32B5319824C1C10E00243056 /* YogaUIViewController.swift */,
+				32D4FABF24A38A04006D9B96 /* YogaViewController.swift */,
 				32D4FABD24A38A04006D9B96 /* ChatsViewController.swift */,
 				32D4FABE24A38A04006D9B96 /* ArticlesViewController.swift */,
-				32D4FABF24A38A04006D9B96 /* YogaViewController.swift */,
 				32D4FAC024A38A04006D9B96 /* SettingsViewController.swift */,
 			);
 			path = ViewController;
@@ -382,6 +385,7 @@
 			files = (
 				32CF274A24A1269D0049761E /* AppDelegate.swift in Sources */,
 				3211C12B24AB13F3006EF20F /* StartViewController.swift in Sources */,
+				32B5319924C1C10E00243056 /* YogaUIViewController.swift in Sources */,
 				32D4FABA24A3823B006D9B96 /* AppColors.swift in Sources */,
 				32C2B7E824AB6257002F2064 /* BottomSideRoundView.swift in Sources */,
 				32D4FAC424A38A04006D9B96 /* SettingsViewController.swift in Sources */,

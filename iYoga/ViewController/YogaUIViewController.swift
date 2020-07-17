@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YogaViewController: UIViewController {
+class YogaUIViewController: UIViewController {
 
     @IBOutlet weak var yogaImageView: UIImageView!
     override func viewDidLoad() {
