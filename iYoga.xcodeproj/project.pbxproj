@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320CC57E24C21BA000CE1932 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CC57D24C21BA000CE1932 /* Constants.swift */; };
 		3211C12624AB1245006EF20F /* UbuntuMono-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3211C12224AB1245006EF20F /* UbuntuMono-BI.ttf */; };
 		3211C12724AB1245006EF20F /* UbuntuMono-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3211C12324AB1245006EF20F /* UbuntuMono-RI.ttf */; };
 		3211C12824AB1245006EF20F /* UbuntuMono-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3211C12424AB1245006EF20F /* UbuntuMono-R.ttf */; };
@@ -14,6 +15,7 @@
 		3211C12B24AB13F3006EF20F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211C12A24AB13F3006EF20F /* StartViewController.swift */; };
 		3211C12D24AB34E7006EF20F /* TopSideRoundTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211C12C24AB34E7006EF20F /* TopSideRoundTabBar.swift */; };
 		32B5319924C1C10E00243056 /* YogaUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5319824C1C10E00243056 /* YogaUIViewController.swift */; };
+		32B5319C24C1C9F500243056 /* CommonUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B5319B24C1C9F500243056 /* CommonUI.swift */; };
 		32C2B7DA24AB5E6E002F2064 /* Ubuntu-C.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D024AB5E6D002F2064 /* Ubuntu-C.ttf */; };
 		32C2B7DB24AB5E6E002F2064 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D124AB5E6D002F2064 /* Ubuntu-M.ttf */; };
 		32C2B7DC24AB5E6E002F2064 /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D224AB5E6D002F2064 /* Ubuntu-MI.ttf */; };
@@ -33,7 +35,7 @@
 		32CF275824A1269F0049761E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CF275624A1269F0049761E /* LaunchScreen.storyboard */; };
 		32CF276324A1269F0049761E /* iYogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF276224A1269F0049761E /* iYogaTests.swift */; };
 		32CF276E24A1269F0049761E /* iYogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF276D24A1269F0049761E /* iYogaUITests.swift */; };
-		32D4FABA24A3823B006D9B96 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FAB924A3823B006D9B96 /* AppColors.swift */; };
+		32D4FABA24A3823B006D9B96 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FAB924A3823B006D9B96 /* Extension.swift */; };
 		32D4FAC124A38A04006D9B96 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FABD24A38A04006D9B96 /* ChatsViewController.swift */; };
 		32D4FAC224A38A04006D9B96 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FABE24A38A04006D9B96 /* ArticlesViewController.swift */; };
 		32D4FAC324A38A04006D9B96 /* YogaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FABF24A38A04006D9B96 /* YogaViewController.swift */; };
@@ -58,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		320CC57D24C21BA000CE1932 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3211C12224AB1245006EF20F /* UbuntuMono-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-BI.ttf"; sourceTree = "<group>"; };
 		3211C12324AB1245006EF20F /* UbuntuMono-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-RI.ttf"; sourceTree = "<group>"; };
 		3211C12424AB1245006EF20F /* UbuntuMono-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-R.ttf"; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		3211C12A24AB13F3006EF20F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3211C12C24AB34E7006EF20F /* TopSideRoundTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSideRoundTabBar.swift; sourceTree = "<group>"; };
 		32B5319824C1C10E00243056 /* YogaUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaUIViewController.swift; sourceTree = "<group>"; };
+		32B5319B24C1C9F500243056 /* CommonUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUI.swift; sourceTree = "<group>"; };
 		32C2B7D024AB5E6D002F2064 /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-C.ttf"; sourceTree = "<group>"; };
 		32C2B7D124AB5E6D002F2064 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		32C2B7D224AB5E6D002F2064 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		32CF276924A1269F0049761E /* iYogaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iYogaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF276D24A1269F0049761E /* iYogaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iYogaUITests.swift; sourceTree = "<group>"; };
 		32CF276F24A1269F0049761E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32D4FAB924A3823B006D9B96 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		32D4FAB924A3823B006D9B96 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		32D4FABD24A38A04006D9B96 /* ChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		32D4FABE24A38A04006D9B96 /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		32D4FABF24A38A04006D9B96 /* YogaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		32B5319A24C1C9C800243056 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				32B5319B24C1C9F500243056 /* CommonUI.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		32C2B7E424AB611C002F2064 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 		32CF274824A1269D0049761E /* iYoga */ = {
 			isa = PBXGroup;
 			children = (
+				32B5319A24C1C9C800243056 /* Common */,
 				32CF275924A1269F0049761E /* Info.plist */,
 				32CF275424A1269F0049761E /* Assets.xcassets */,
 				32CF274924A1269D0049761E /* AppDelegate.swift */,
@@ -220,7 +233,8 @@
 		32D4FAB824A3821E006D9B96 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				32D4FAB924A3823B006D9B96 /* AppColors.swift */,
+				32D4FAB924A3823B006D9B96 /* Extension.swift */,
+				320CC57D24C21BA000CE1932 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -386,11 +400,13 @@
 				32CF274A24A1269D0049761E /* AppDelegate.swift in Sources */,
 				3211C12B24AB13F3006EF20F /* StartViewController.swift in Sources */,
 				32B5319924C1C10E00243056 /* YogaUIViewController.swift in Sources */,
-				32D4FABA24A3823B006D9B96 /* AppColors.swift in Sources */,
+				32D4FABA24A3823B006D9B96 /* Extension.swift in Sources */,
 				32C2B7E824AB6257002F2064 /* BottomSideRoundView.swift in Sources */,
 				32D4FAC424A38A04006D9B96 /* SettingsViewController.swift in Sources */,
 				32D4FAC324A38A04006D9B96 /* YogaViewController.swift in Sources */,
+				320CC57E24C21BA000CE1932 /* Constants.swift in Sources */,
 				32D4FAC124A38A04006D9B96 /* ChatsViewController.swift in Sources */,
+				32B5319C24C1C9F500243056 /* CommonUI.swift in Sources */,
 				3211C12D24AB34E7006EF20F /* TopSideRoundTabBar.swift in Sources */,
 				32CF274C24A1269D0049761E /* SceneDelegate.swift in Sources */,
 				32D4FAC224A38A04006D9B96 /* ArticlesViewController.swift in Sources */,
