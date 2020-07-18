@@ -262,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" id="KYT-Ja-Zdq">
-                                <rect key="frame" x="112" y="289" width="150" height="40"/>
+                                <rect key="frame" x="112" y="288" width="150" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.72360563278198242" green="0.62681233882904053" blue="0.53664416074752808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
@@ -297,31 +297,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Chats" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Chats" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
                                 <rect key="frame" x="153" y="291.5" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="26"/>
                                 <color key="textColor" red="0.72360563278198242" green="0.62681233882904053" blue="0.53664416074752808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="71" y="338.5" width="233.5" height="22.5"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="71" y="338.5" width="272.5" height="22.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="71" id="D7y-Vb-CAw" userLabel="Page is not Implemented yet.centerX = Chats.centerX"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="17" id="STD-CW-Lzj"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" constant="0.75" id="ZdQ-ZZ-ieg" userLabel="centerY = Chats.centerY + 53.75"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" constant="1" id="hpa-5w-3ya" userLabel="centerX = Chats.centerX"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="291.5" id="zgY-zG-jlq"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chats" image="chats" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="chatsSubLabel" destination="NDk-cv-Gan" id="zxH-Qh-AKs"/>
+                        <outlet property="chatsTitleLabel" destination="zEq-FU-wV5" id="s2z-dK-xSt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,30 +365,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVt-tw-Jy1">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVt-tw-Jy1">
                                 <rect key="frame" x="135.5" y="199.5" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="26"/>
                                 <color key="textColor" red="0.72360563278198242" green="0.62681233882904053" blue="0.53664416074752808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM5-6L-oE5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM5-6L-oE5">
                                 <rect key="frame" x="51.5" y="246.5" width="272.5" height="22.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="IVt-tw-Jy1" secondAttribute="centerY" constant="97" id="2ub-Fg-Nwq"/>
-                            <constraint firstItem="HM5-6L-oE5" firstAttribute="centerX" secondItem="IVt-tw-Jy1" secondAttribute="centerX" constant="0.25" id="DvO-tb-oNQ"/>
-                            <constraint firstItem="HM5-6L-oE5" firstAttribute="top" secondItem="IVt-tw-Jy1" secondAttribute="bottom" constant="17" id="EM0-Za-Lbd"/>
-                            <constraint firstAttribute="centerX" secondItem="IVt-tw-Jy1" secondAttribute="centerX" id="lLA-YA-U8b"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ssN-16-LaV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="un-settings" selectedImage="settings" id="qzG-Yy-n2N"/>
+                    <connections>
+                        <outlet property="settingsSubLabel" destination="HM5-6L-oE5" id="ih3-zb-Xdu"/>
+                        <outlet property="settingsTitleLabel" destination="IVt-tw-Jy1" id="bb6-oZ-Vbx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LE1-Zd-XLw" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,14 +402,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-c9-fLv">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-c9-fLv">
                                 <rect key="frame" x="51" y="246.5" width="273" height="22.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Articles" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-i8-R8v">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Articles" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-i8-R8v">
                                 <rect key="frame" x="138.5" y="199.5" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="26"/>
                                 <color key="textColor" red="0.72360563278198242" green="0.62681233882904053" blue="0.53664416074752808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -418,16 +419,14 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="8sb-c9-fLv" firstAttribute="centerX" secondItem="F9b-i8-R8v" secondAttribute="centerX" id="d6c-fk-rcf"/>
-                            <constraint firstItem="8sb-c9-fLv" firstAttribute="top" secondItem="F9b-i8-R8v" secondAttribute="bottom" constant="17" id="qEZ-K6-FV9" userLabel="Page is not Implemented yet.top = Articles.bottom + 17"/>
-                            <constraint firstAttribute="centerY" secondItem="F9b-i8-R8v" secondAttribute="centerY" constant="97" id="qht-F8-r7v" userLabel="centerY = Articles.centerY + 53.75"/>
-                            <constraint firstAttribute="centerX" secondItem="F9b-i8-R8v" secondAttribute="centerX" id="ycj-JX-fAj"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XJd-Me-qfh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Articles" image="un-articles" selectedImage="articles" id="Qr6-qq-VaX"/>
                     <navigationItem key="navigationItem" id="R3k-20-XJi"/>
+                    <connections>
+                        <outlet property="articlesSubLabel" destination="8sb-c9-fLv" id="Fa2-0p-4BW"/>
+                        <outlet property="articlesTitleLabel" destination="F9b-i8-R8v" id="PCs-j7-0oW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpB-Nu-lMb" sceneMemberID="firstResponder"/>
             </objects>
@@ -489,6 +488,6 @@
         <image name="un-settings" width="28" height="28"/>
         <image name="un-yoga" width="28" height="28"/>
         <image name="yoga" width="28" height="28"/>
-        <image name="yoga_image.jpg" width="1612.800048828125" height="1075.199951171875"/>
+        <image name="yoga_image.jpg" width="172.80000305175781" height="115.19999694824219"/>
     </resources>
 </document>
