@@ -12,32 +12,24 @@ class YogaUIViewController: UIViewController {
 
     let baseView = UIView()
     
-    var topView : UIView!   // MARK: Top Portion of View(Includes Image and Rating SubViews).
-    var bottomView: UIView! // MARK: Bottom Portion of View(Includes Description & Reviews).
-    
-    var bottomTopView : UIView!// MARK: Top Portion of Bottom View(Includes Store Name, Details, Timing & Status).
-    var bottomBottomView : UIView!// MARK: Bottom Portion of Bottom View(Includes Store Name, Details, Timing & Status).
+    var topView, bottomView : UIView!
+    var bottomTopView, bottomBottomView : UIView!
 
-    // MARK: Top Portion subViews.
-    @IBOutlet var topImageView: UIImageView!
-    //@IBOutlet weak var yogaImageView: UIImageView!
+    // MARK: Top subView.
+    @IBOutlet var topImageView: BottomSideRoundView!
     var ratingSubView: UIView!
     var ratingLabel: UILabel!
     var favouriteButton: UIButton!
     
-    // MARK: Middle Portion subViews.
-    var locationNameLabel: UILabel!
-    var locationButton: UIButton!
-    var locationDetailLabel: UILabel!
-    var locateOnMapButton: UIButton!
+    // MARK: Bottom Top subView.
+    var locationNameLabel, locationDetailLabel: UILabel!
+    var locationButton, locateOnMapButton: UIButton!
     
     var bottomTopLeftSubView: UIView!      // This will be a subView for weekend label/timings.
-    var weekdayLabel: UILabel!          // This will display weekday label.
-    var weekdayTimingLabel: UILabel!    // This will display store weekday timings
+    var weekdayLabel, weekdayTimingLabel: UILabel!  // This will display weekday details.
     
     var bottomTopRightSubView: UIView!     // This will be a subView for weekend label/timings.
-    var weekendLabel: UILabel!          // This will display weekend label.
-    var weekendTimingLabel: UILabel!    // This will display store weekend timings
+    var weekendLabel, weekendTimingLabel: UILabel!  // This will display weekend details.
 
     var locationStatus: UILabel!        // This will indicate store current Open/Close Status.
     
@@ -91,11 +83,11 @@ class YogaUIViewController: UIViewController {
         self.configureReviewButton()
     }
     
-    // MARK: Configure TopView.
+    // MARK: - Configure TopView.
     func configureTopView() {
         self.loggerMin("")
         topView = UIView()
-        topView.backgroundColor = .white
+        topView.backgroundColor = .red
         topView.clipsToBounds = true
         self.view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
@@ -105,55 +97,10 @@ class YogaUIViewController: UIViewController {
         topView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
     }
     
-    // MARK: Configure BottomView.
-    func configureBottomView() {
-        self.loggerMin("")
-        bottomView = UIView()
-        bottomView.backgroundColor = .clear
-        bottomView.clipsToBounds = true
-        self.view.addSubview(bottomView)
-        
-        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
-        bottomView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        bottomView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        bottomView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
-    }
-    
-    func configureBottomTopView() {
-        self.loggerMin("")
-        bottomTopView = UIView()
-        bottomTopView.backgroundColor = .white
-        bottomTopView.clipsToBounds = true
-        bottomView.addSubview(bottomTopView)
-        
-        bottomTopView.translatesAutoresizingMaskIntoConstraints = false
-        bottomTopView.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
-        bottomTopView.leftAnchor.constraint(equalTo: bottomView.leftAnchor).isActive = true
-        bottomTopView.rightAnchor.constraint(equalTo: bottomView.rightAnchor).isActive = true
-        bottomTopView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
-                                              multiplier: 0.5).isActive = true
-    }
-    
-    func configureBottomBottomView() {
-        self.loggerMin("")
-        bottomBottomView = UIView()
-        bottomBottomView.backgroundColor = .white
-        bottomBottomView.clipsToBounds = true
-        bottomView.addSubview(bottomBottomView)
-        bottomBottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomBottomView.topAnchor.constraint(equalTo: bottomTopView.bottomAnchor).isActive = true
-        bottomBottomView.leftAnchor.constraint(equalTo: bottomView.leftAnchor).isActive = true
-        bottomBottomView.rightAnchor.constraint(equalTo: bottomView.rightAnchor).isActive = true
-        bottomBottomView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
-                                                 multiplier: 0.5).isActive = true
-    }
-    
-    // MARK: - Configure SubView(s).
-    // MARK: Top.
+    // MARK: Top subViews.
     func configureTopImageView() {
         self.loggerMin("")
-        topImageView = UIImageView.init()
+        topImageView = BottomSideRoundView.init()
         let topImage = UIImage(named: "yoga_image.jpg")?.withRenderingMode(.automatic)
         topImageView.image = topImage
         topImageView.contentMode = .scaleAspectFill
@@ -247,8 +194,50 @@ class YogaUIViewController: UIViewController {
         favouriteButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
         favouriteButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
     }
+    // MARK: - Configure BottomView.
+    func configureBottomView() {
+        self.loggerMin("")
+        bottomView = UIView()
+        bottomView.backgroundColor = .clear
+        bottomView.clipsToBounds = true
+        self.view.addSubview(bottomView)
+        
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
+        bottomView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        bottomView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        bottomView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
+    }
     
-    // MARK: Middle.
+    func configureBottomTopView() {
+        self.loggerMin("")
+        bottomTopView = UIView()
+        bottomTopView.backgroundColor = .white
+        bottomTopView.clipsToBounds = true
+        bottomView.addSubview(bottomTopView)
+        
+        bottomTopView.translatesAutoresizingMaskIntoConstraints = false
+        bottomTopView.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+        bottomTopView.leftAnchor.constraint(equalTo: bottomView.leftAnchor).isActive = true
+        bottomTopView.rightAnchor.constraint(equalTo: bottomView.rightAnchor).isActive = true
+        bottomTopView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
+                                              multiplier: 0.5).isActive = true
+    }
+    
+    func configureBottomBottomView() {
+        self.loggerMin("")
+        bottomBottomView = UIView()
+        bottomBottomView.backgroundColor = .white
+        bottomBottomView.clipsToBounds = true
+        bottomView.addSubview(bottomBottomView)
+        bottomBottomView.translatesAutoresizingMaskIntoConstraints = false
+        bottomBottomView.topAnchor.constraint(equalTo: bottomTopView.bottomAnchor).isActive = true
+        bottomBottomView.leftAnchor.constraint(equalTo: bottomView.leftAnchor).isActive = true
+        bottomBottomView.rightAnchor.constraint(equalTo: bottomView.rightAnchor).isActive = true
+        bottomBottomView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
+                                                 multiplier: 0.5).isActive = true
+    }
+    // MARK: Configure Bottom Top subView(s)
     func configureSubViewsInBottomTopView() {
         self.loggerMin("")
         locationNameLabel = UILabel()
@@ -439,7 +428,7 @@ class YogaUIViewController: UIViewController {
         lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
 
-    // MARK: Bottom-Botttom SubView.
+    // MARK: Configure Bottom Bottom subView(s)
     func configureSubViewsInBottomBottomView() {
         self.loggerMin("")
         descriptionLabel = UILabel()
@@ -484,7 +473,6 @@ class YogaUIViewController: UIViewController {
         reviewButton.setTitle(Constants.iYReviewsButton, for: .normal)
         reviewButton.setTitleColor(.firstColorOption, for: .normal)
         reviewButton.titleLabel?.font = UIFont.init(name: "Ubuntu", size: 14.0)
-        //reviewButton.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
         reviewButton.backgroundColor = .clear
         reviewButton.titleLabel?.textAlignment = .center
         reviewButton.tintColor = .clear
@@ -501,10 +489,8 @@ class YogaUIViewController: UIViewController {
     // MARK: -
     func updateViews() {
         self.loggerMin("")
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.topImageView.image = UIImage.init(named: "yoga_image.jpg")
-//        }, completion: nil)
+        
+        //topView.roundCorners(corners: .topLeft, radius: 0)
     }
 
 }
-

@@ -38,7 +38,6 @@
 		32D4FABA24A3823B006D9B96 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FAB924A3823B006D9B96 /* Extension.swift */; };
 		32D4FAC124A38A04006D9B96 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FABD24A38A04006D9B96 /* ChatsViewController.swift */; };
 		32D4FAC224A38A04006D9B96 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FABE24A38A04006D9B96 /* ArticlesViewController.swift */; };
-		32D4FAC324A38A04006D9B96 /* YogaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FABF24A38A04006D9B96 /* YogaViewController.swift */; };
 		32D4FAC424A38A04006D9B96 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FAC024A38A04006D9B96 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,7 +96,6 @@
 		32D4FAB924A3823B006D9B96 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		32D4FABD24A38A04006D9B96 /* ChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		32D4FABE24A38A04006D9B96 /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
-		32D4FABF24A38A04006D9B96 /* YogaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaViewController.swift; sourceTree = "<group>"; };
 		32D4FAC024A38A04006D9B96 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,14 +154,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		32B5319A24C1C9C800243056 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				32B5319B24C1C9F500243056 /* CommonUI.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		32C2B7E424AB611C002F2064 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +185,6 @@
 		32CF274824A1269D0049761E /* iYoga */ = {
 			isa = PBXGroup;
 			children = (
-				32B5319A24C1C9C800243056 /* Common */,
 				32CF275924A1269F0049761E /* Info.plist */,
 				32CF275424A1269F0049761E /* Assets.xcassets */,
 				32CF274924A1269D0049761E /* AppDelegate.swift */,
@@ -233,6 +222,7 @@
 		32D4FAB824A3821E006D9B96 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				32B5319B24C1C9F500243056 /* CommonUI.swift */,
 				32D4FAB924A3823B006D9B96 /* Extension.swift */,
 				320CC57D24C21BA000CE1932 /* Constants.swift */,
 			);
@@ -243,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				32B5319824C1C10E00243056 /* YogaUIViewController.swift */,
-				32D4FABF24A38A04006D9B96 /* YogaViewController.swift */,
 				32D4FABD24A38A04006D9B96 /* ChatsViewController.swift */,
 				32D4FABE24A38A04006D9B96 /* ArticlesViewController.swift */,
 				32D4FAC024A38A04006D9B96 /* SettingsViewController.swift */,
@@ -403,7 +392,6 @@
 				32D4FABA24A3823B006D9B96 /* Extension.swift in Sources */,
 				32C2B7E824AB6257002F2064 /* BottomSideRoundView.swift in Sources */,
 				32D4FAC424A38A04006D9B96 /* SettingsViewController.swift in Sources */,
-				32D4FAC324A38A04006D9B96 /* YogaViewController.swift in Sources */,
 				320CC57E24C21BA000CE1932 /* Constants.swift in Sources */,
 				32D4FAC124A38A04006D9B96 /* ChatsViewController.swift in Sources */,
 				32B5319C24C1C9F500243056 /* CommonUI.swift in Sources */,

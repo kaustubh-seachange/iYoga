@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 
-class BottomSideRoundView: UIView {
+class BottomSideRoundView: UIImageView {
     private var shapeLayer: CALayer?
     
     private func addShape() {
