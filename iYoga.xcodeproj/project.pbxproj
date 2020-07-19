@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32073F8824C4C98C006E2CAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 32073F8724C4C98C006E2CAA /* README.md */; };
 		320CC57E24C21BA000CE1932 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CC57D24C21BA000CE1932 /* Constants.swift */; };
 		3211C12624AB1245006EF20F /* UbuntuMono-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3211C12224AB1245006EF20F /* UbuntuMono-BI.ttf */; };
 		3211C12724AB1245006EF20F /* UbuntuMono-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3211C12324AB1245006EF20F /* UbuntuMono-RI.ttf */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32073F8724C4C98C006E2CAA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		320CC57D24C21BA000CE1932 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3211C12224AB1245006EF20F /* UbuntuMono-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-BI.ttf"; sourceTree = "<group>"; };
 		3211C12324AB1245006EF20F /* UbuntuMono-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-RI.ttf"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		32CF273D24A1269D0049761E = {
 			isa = PBXGroup;
 			children = (
+				32073F8724C4C98C006E2CAA /* README.md */,
 				32CF274824A1269D0049761E /* iYoga */,
 				32CF276124A1269F0049761E /* iYogaTests */,
 				32CF276C24A1269F0049761E /* iYogaUITests */,
@@ -354,6 +357,7 @@
 				32CF275324A1269D0049761E /* Main.storyboard in Resources */,
 				32C2B7E624AB613D002F2064 /* yoga_image.jpg in Resources */,
 				32C2B7E124AB5E6E002F2064 /* Ubuntu-Th.ttf in Resources */,
+				32073F8824C4C98C006E2CAA /* README.md in Resources */,
 				32C2B7DB24AB5E6E002F2064 /* Ubuntu-M.ttf in Resources */,
 				32C2B7E024AB5E6E002F2064 /* Ubuntu-B.ttf in Resources */,
 				3211C12924AB1245006EF20F /* UbuntuMono-B.ttf in Resources */,
