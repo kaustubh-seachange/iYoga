@@ -9,14 +9,14 @@
 import UIKit
 
 class YogaUIViewController: UIViewController {
-
+    var isTabBarSlideUp: Bool = true
     let baseView = UIView()
     
-    var topView, bottomView : UIView!
-    var bottomTopView, bottomBottomView : UIView!
+    var topView: UIView!
+    var bottomView, bottomTopView, bottomBottomView: UIView!
 
     // MARK: Top subView.
-    @IBOutlet var topImageView: BottomSideRoundView!
+    @IBOutlet var topImageView: UIImageView!
     var ratingSubView: UIView!
     var ratingLabel: UILabel!
     var favouriteButton: UIButton!
@@ -49,22 +49,29 @@ class YogaUIViewController: UIViewController {
         view.backgroundColor = UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0)
 
         self.configureViews()
+        self.configureTapGesture()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.configureTabBar(shouldGoUp: true)
         self.updateViews()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.isTabBarSlideUp {
+            self.configureTabBar(shouldGoUp: !self.isTabBarSlideUp)
+        }
+    }
+    
+    // MARK: - LayoutView(s).
+    override func viewDidLayoutSubviews() {
+        self.loggerMin("")
+        topImageView.bottomRoundView(cornerRadius: 40.0)
+    }
     
     // MARK: - View Configuration
     // MARK: This method will configure View Controller Component(s)
     func configureViews() {
-        self.loggerMin("StatusBar Height: \(String(describing: view.window?.windowScene?.statusBarManager?.statusBarFrame.height))")
-        self.loggerMin("NavigationBar Height: \(String(describing: self.navigationController?.navigationBar.frame.size.height))")
-        self.loggerMin("View Height: \(self.view.frame.size.height)")
-        self.loggerMin("TabBar Height: \(String(describing: self.tabBarController?.tabBar.frame.size.height))")
-        self.tabBarController?.tabBar.isHidden = false
-
         self.configureTopView()
         self.configureTopImageView()
         self.configureRatingView()
@@ -87,7 +94,7 @@ class YogaUIViewController: UIViewController {
     func configureTopView() {
         self.loggerMin("")
         topView = UIView()
-        topView.backgroundColor = .red
+        topView.backgroundColor = .white
         topView.clipsToBounds = true
         self.view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
@@ -100,14 +107,14 @@ class YogaUIViewController: UIViewController {
     // MARK: Top subViews.
     func configureTopImageView() {
         self.loggerMin("")
-        topImageView = BottomSideRoundView.init()
+        topImageView = UIImageView()
         let topImage = UIImage(named: "yoga_image.jpg")?.withRenderingMode(.automatic)
         topImageView.image = topImage
         topImageView.contentMode = .scaleAspectFill
         topImageView.layer.borderWidth = 1.0
         topImageView.layer.masksToBounds = true
         topImageView.clipsToBounds = true
-        topImageView.layer.cornerRadius = 40
+        //topImageView.layer.cornerRadius = 40
         topImageView.layer.borderColor = UIColor.lightGray.cgColor
         topView.addSubview(topImageView)
         topImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -157,7 +164,7 @@ class YogaUIViewController: UIViewController {
             ratingSubView.addSubview(ratingButton)
             ratingButton.translatesAutoresizingMaskIntoConstraints = false
             ratingButton.leftAnchor.constraint(equalTo: ratingLabel.leftAnchor,
-                                      constant: CGFloat(xShift)).isActive = true
+                                               constant: CGFloat(xShift)).isActive = true
             ratingButton.topAnchor.constraint(equalTo: ratingLabel.bottomAnchor,
                                               constant: 6).isActive = true
             ratingButton.widthAnchor.constraint(equalToConstant: 16).isActive = true
@@ -194,6 +201,7 @@ class YogaUIViewController: UIViewController {
         favouriteButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
         favouriteButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
     }
+    
     // MARK: - Configure BottomView.
     func configureBottomView() {
         self.loggerMin("")
@@ -206,11 +214,12 @@ class YogaUIViewController: UIViewController {
         bottomView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
         bottomView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         bottomView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        bottomView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
+        bottomView.heightAnchor.constraint(equalTo: self.view.heightAnchor,
+                                           multiplier: 0.5).isActive = true
     }
     
     func configureBottomTopView() {
-        self.loggerMin("")
+        self.loggerMin("\(UIScreen.main.bounds.height)")
         bottomTopView = UIView()
         bottomTopView.backgroundColor = .white
         bottomTopView.clipsToBounds = true
@@ -220,8 +229,14 @@ class YogaUIViewController: UIViewController {
         bottomTopView.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         bottomTopView.leftAnchor.constraint(equalTo: bottomView.leftAnchor).isActive = true
         bottomTopView.rightAnchor.constraint(equalTo: bottomView.rightAnchor).isActive = true
-        bottomTopView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
-                                              multiplier: 0.5).isActive = true
+        if UIScreen.main.bounds.height > 670 {
+            bottomTopView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
+                                                  multiplier: 0.4).isActive = true
+        }
+        else {
+            bottomTopView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
+                                                  multiplier: 0.5).isActive = true
+        }
     }
     
     func configureBottomBottomView() {
@@ -234,9 +249,16 @@ class YogaUIViewController: UIViewController {
         bottomBottomView.topAnchor.constraint(equalTo: bottomTopView.bottomAnchor).isActive = true
         bottomBottomView.leftAnchor.constraint(equalTo: bottomView.leftAnchor).isActive = true
         bottomBottomView.rightAnchor.constraint(equalTo: bottomView.rightAnchor).isActive = true
-        bottomBottomView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
-                                                 multiplier: 0.5).isActive = true
+        if UIScreen.main.bounds.height > 670 {
+            bottomBottomView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
+                                                     multiplier: 0.4).isActive = true
+        }
+        else {
+            bottomBottomView.heightAnchor.constraint(equalTo: bottomView.heightAnchor,
+                                                     multiplier: 0.5).isActive = true
+        }
     }
+    
     // MARK: Configure Bottom Top subView(s)
     func configureSubViewsInBottomTopView() {
         self.loggerMin("")
@@ -248,9 +270,12 @@ class YogaUIViewController: UIViewController {
         locationNameLabel.clipsToBounds = true
         bottomTopView.addSubview(locationNameLabel)
         locationNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        locationNameLabel.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor, constant: 10).isActive = true
-        locationNameLabel.topAnchor.constraint(equalTo: bottomTopView.topAnchor, constant: 6).isActive = true
-        locationNameLabel.rightAnchor.constraint(equalTo: bottomTopView.rightAnchor, constant: -10).isActive = true
+        locationNameLabel.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor,
+                                                constant: 10).isActive = true
+        locationNameLabel.topAnchor.constraint(equalTo: bottomTopView.topAnchor,
+                                               constant: 6).isActive = true
+        locationNameLabel.rightAnchor.constraint(equalTo: bottomTopView.rightAnchor,
+                                                 constant: -10).isActive = true
         locationNameLabel.heightAnchor.constraint(equalToConstant: 32).isActive = true
         
         locationButton = UIButton(type: .custom)
@@ -261,15 +286,16 @@ class YogaUIViewController: UIViewController {
         locationButton.clipsToBounds = true
         bottomTopView.addSubview(locationButton)
         locationButton.translatesAutoresizingMaskIntoConstraints = false
-        locationButton.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor, constant: 10).isActive = true
-        locationButton.topAnchor.constraint(equalTo: locationNameLabel.bottomAnchor, constant: 6).isActive = true
+        locationButton.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor,
+                                             constant: 10).isActive = true
+        locationButton.topAnchor.constraint(equalTo: locationNameLabel.bottomAnchor,
+                                            constant: 6).isActive = true
         locationButton.widthAnchor.constraint(equalToConstant: 16).isActive = true
         locationButton.heightAnchor.constraint(equalToConstant: 16).isActive = true
         
         locationDetailLabel = UILabel()
         locationDetailLabel.text = Constants.iYLocationDetailLabel
         locationDetailLabel.font = UIFont.init(name: "Ubuntu", size: 14.0)
-        //locationDetailLabel.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.regular)
         locationDetailLabel.textColor = .thirdColorOption
         locationDetailLabel.backgroundColor = .clear
         locationDetailLabel.clipsToBounds = true
@@ -290,7 +316,6 @@ class YogaUIViewController: UIViewController {
         locateOnMapButton.setTitle(Constants.iYLocateOnMapButton, for: .normal)
         locateOnMapButton.setTitleColor(.firstColorOption, for: .normal)
         locateOnMapButton.titleLabel?.font = UIFont.init(name: "Ubuntu", size: 16.0)
-
         locateOnMapButton.backgroundColor = .clear
         locateOnMapButton.titleLabel?.textAlignment = .center
         locateOnMapButton.tintColor = .clear
@@ -301,7 +326,8 @@ class YogaUIViewController: UIViewController {
                                                constant: 10).isActive = true
         locateOnMapButton.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor,
                                                 constant: 10).isActive = true
-        locateOnMapButton.rightAnchor.constraint(equalTo: bottomTopView.rightAnchor, constant: -10).isActive = true
+        locateOnMapButton.rightAnchor.constraint(equalTo: bottomTopView.rightAnchor,
+                                                 constant: -10).isActive = true
         locateOnMapButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
     }
     
@@ -312,7 +338,8 @@ class YogaUIViewController: UIViewController {
         bottomTopLeftSubView.clipsToBounds = true
         bottomTopView.addSubview(bottomTopLeftSubView)
         bottomTopLeftSubView.translatesAutoresizingMaskIntoConstraints = false
-        bottomTopLeftSubView.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor, constant: 10).isActive = true
+        bottomTopLeftSubView.leftAnchor.constraint(equalTo: bottomTopView.leftAnchor,
+                                                   constant: 10).isActive = true
         bottomTopLeftSubView.topAnchor.constraint(equalTo: locateOnMapButton.bottomAnchor).isActive = true
         bottomTopLeftSubView.bottomAnchor.constraint(equalTo: bottomTopView.bottomAnchor,
                                                      constant: -30).isActive = true
@@ -330,7 +357,8 @@ class YogaUIViewController: UIViewController {
         weekdayLabel.translatesAutoresizingMaskIntoConstraints = false
         weekdayLabel.leftAnchor.constraint(equalTo: bottomTopLeftSubView.leftAnchor).isActive = true
         weekdayLabel.topAnchor.constraint(equalTo: bottomTopLeftSubView.topAnchor).isActive = true
-        weekdayLabel.widthAnchor.constraint(equalTo: bottomTopLeftSubView.widthAnchor, constant: -10).isActive = true
+        weekdayLabel.widthAnchor.constraint(equalTo: bottomTopLeftSubView.widthAnchor,
+                                            constant: -10).isActive = true
         weekdayLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         // Configure weekday Timing Label.
@@ -467,15 +495,15 @@ class YogaUIViewController: UIViewController {
 
     func configureReviewButton() {
         self.loggerMin("")
-        reviewButton = UIButton()
-        let reviewimage = UIImage(named: "review")?.withRenderingMode(.alwaysTemplate)
-        reviewButton.setBackgroundImage(reviewimage, for: .normal)
+        reviewButton = UIButton.init(type: .custom)
+        reviewButton.tintColor = .firstColorOption
+        let reviewimage = UIImage(named: "review")?.withRenderingMode(.automatic)
+        reviewButton.setImage(reviewimage, for: .normal)
         reviewButton.setTitle(Constants.iYReviewsButton, for: .normal)
         reviewButton.setTitleColor(.firstColorOption, for: .normal)
         reviewButton.titleLabel?.font = UIFont.init(name: "Ubuntu", size: 14.0)
         reviewButton.backgroundColor = .clear
         reviewButton.titleLabel?.textAlignment = .center
-        reviewButton.tintColor = .clear
         reviewButton.clipsToBounds = true
         bottomBottomView.addSubview(reviewButton)
         reviewButton.translatesAutoresizingMaskIntoConstraints = false
@@ -486,11 +514,25 @@ class YogaUIViewController: UIViewController {
         reviewButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
     }
     
+    // MARK: - Configure Gesture.
+    func configureTapGesture() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                              action: #selector(handleTapGesture)))
+    }
+    
+    func configureTabBar(shouldGoUp: Bool) {
+        self.isTabBarSlideUp = shouldGoUp
+        self.tabBarController?.slideTabBar(isUp: self.isTabBarSlideUp, animated: true)
+    }
+    
     // MARK: -
     func updateViews() {
         self.loggerMin("")
-        
-        //topView.roundCorners(corners: .topLeft, radius: 0)
     }
-
+    
+    @objc func handleTapGesture(sender: UITapGestureRecognizer){
+        self.loggerMin("")
+        self.isTabBarSlideUp = (self.isTabBarSlideUp) ? false : true
+        self.tabBarController?.slideTabBar(isUp: self.isTabBarSlideUp, animated: true)
+    }
 }

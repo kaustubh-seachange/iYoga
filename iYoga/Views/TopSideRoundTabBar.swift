@@ -46,7 +46,7 @@ class TopSideRoundTabBar: UITabBar {
         
         let path = UIBezierPath()
 
-        // MARK: 1. start top left, but below the height of tab bar.
+        // MARK: 1. start top left, but below height of tab bar.
         path.move(to: CGPoint(x: 0, y: height/2))
         
         path.addCurve(to: CGPoint(x: 25, y: 0),

@@ -27,7 +27,6 @@
 		32C2B7E224AB5E6E002F2064 /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D824AB5E6E002F2064 /* Ubuntu-BI.ttf */; };
 		32C2B7E324AB5E6E002F2064 /* Ubuntu-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7D924AB5E6E002F2064 /* Ubuntu-RI.ttf */; };
 		32C2B7E624AB613D002F2064 /* yoga_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C2B7E524AB613D002F2064 /* yoga_image.jpg */; };
-		32C2B7E824AB6257002F2064 /* BottomSideRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2B7E724AB6257002F2064 /* BottomSideRoundView.swift */; };
 		32CF274A24A1269D0049761E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF274924A1269D0049761E /* AppDelegate.swift */; };
 		32CF274C24A1269D0049761E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF274B24A1269D0049761E /* SceneDelegate.swift */; };
 		32CF275324A1269D0049761E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CF275124A1269D0049761E /* Main.storyboard */; };
@@ -79,7 +78,6 @@
 		32C2B7D824AB5E6E002F2064 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
 		32C2B7D924AB5E6E002F2064 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
 		32C2B7E524AB613D002F2064 /* yoga_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoga_image.jpg; sourceTree = "<group>"; };
-		32C2B7E724AB6257002F2064 /* BottomSideRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSideRoundView.swift; sourceTree = "<group>"; };
 		32CF274624A1269D0049761E /* iYoga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iYoga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF274924A1269D0049761E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32CF274B24A1269D0049761E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 		3211C13124AB3682006EF20F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				32C2B7E724AB6257002F2064 /* BottomSideRoundView.swift */,
 				3211C12C24AB34E7006EF20F /* TopSideRoundTabBar.swift */,
 			);
 			path = Views;
@@ -390,7 +387,6 @@
 				3211C12B24AB13F3006EF20F /* StartViewController.swift in Sources */,
 				32B5319924C1C10E00243056 /* YogaUIViewController.swift in Sources */,
 				32D4FABA24A3823B006D9B96 /* Extension.swift in Sources */,
-				32C2B7E824AB6257002F2064 /* BottomSideRoundView.swift in Sources */,
 				32D4FAC424A38A04006D9B96 /* SettingsViewController.swift in Sources */,
 				320CC57E24C21BA000CE1932 /* Constants.swift in Sources */,
 				32D4FAC124A38A04006D9B96 /* ChatsViewController.swift in Sources */,
