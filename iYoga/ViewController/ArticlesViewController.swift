@@ -10,8 +10,8 @@ import UIKit
 
 class ArticlesViewController: UIViewController {
 
-    @IBOutlet var articlesTitleLabel: UILabel!
-    @IBOutlet var articlesSubLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var subLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +29,24 @@ class ArticlesViewController: UIViewController {
     // MARK: This method will configure View Controller Component(s)
     func configureViews() {
         self.loggerMin("")
-        articlesTitleLabel = UILabel()
-        articlesTitleLabel.text = Constants.iYArticlesTitle
-        articlesTitleLabel.font = UIFont.init(name: "Ubuntu-Bold", size: 26.0)
-        articlesTitleLabel.textColor = .firstColorOption
-        articlesTitleLabel.textAlignment = .center
-        self.view.addSubview(articlesTitleLabel)
-        articlesTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        articlesTitleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        articlesTitleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        titleLabel = UILabel()
+        titleLabel.text = Constants.labelTexts.iYArticlesTitle
+        titleLabel.font = UIFont.init(name: "Ubuntu-Bold", size: 26.0)
+        titleLabel.textColor = .firstColorOption
+        titleLabel.textAlignment = .center
+        self.view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
 
-        articlesSubLabel = UILabel()
-        articlesSubLabel.text = Constants.iYPageNotImplemented
-        articlesSubLabel.font = UIFont.init(name: "Ubuntu", size: 20.0)
-        articlesSubLabel.textColor = .secondColorOption
-        articlesSubLabel.textAlignment = .center
-        self.view.addSubview(articlesSubLabel)
-        articlesSubLabel.translatesAutoresizingMaskIntoConstraints = false
-        articlesSubLabel.centerXAnchor.constraint(equalTo: articlesTitleLabel.centerXAnchor).isActive = true
-        articlesSubLabel.topAnchor.constraint(equalTo: articlesTitleLabel.bottomAnchor,
-                                           constant: 10).isActive = true
+        subLabel = UILabel()
+        subLabel.text = Constants.labelTexts.iYPageNotImplemented
+        subLabel.font = UIFont.init(name: "Ubuntu", size: 20.0)
+        subLabel.textColor = .secondColorOption
+        subLabel.textAlignment = .center
+        self.view.addSubview(subLabel)
+        subLabel.translatesAutoresizingMaskIntoConstraints = false
+        subLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
+        subLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
     }
 }

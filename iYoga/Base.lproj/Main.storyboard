@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" id="KYT-Ja-Zdq">
-                                <rect key="frame" x="112" y="287" width="150" height="40"/>
+                                <rect key="frame" x="112" y="285" width="150" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.72360563278198242" green="0.62681233882904053" blue="0.53664416074752808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Chats" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="153" y="291.5" width="71" height="30"/>
+                                <rect key="frame" x="152" y="257" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="26"/>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="71" y="338.5" width="272.5" height="22.5"/>
+                                <rect key="frame" x="51" y="295" width="272.5" height="22.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,8 +77,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Chats" image="chats" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="chatsSubLabel" destination="NDk-cv-Gan" id="zxH-Qh-AKs"/>
-                        <outlet property="chatsTitleLabel" destination="zEq-FU-wV5" id="s2z-dK-xSt"/>
+                        <outlet property="subLabel" destination="NDk-cv-Gan" id="eda-HP-ZzS"/>
+                        <outlet property="titleLabel" destination="zEq-FU-wV5" id="0zh-RD-ZzO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -119,19 +119,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM5-6L-oE5">
+                                <rect key="frame" x="51" y="300" width="272.5" height="22.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVt-tw-Jy1">
-                                <rect key="frame" x="135.5" y="199.5" width="104" height="30"/>
+                                <rect key="frame" x="136" y="259" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="26"/>
                                 <color key="textColor" red="0.72360563278198242" green="0.62681233882904053" blue="0.53664416074752808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM5-6L-oE5">
-                                <rect key="frame" x="51.5" y="246.5" width="272.5" height="22.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -140,8 +140,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="un-settings" selectedImage="settings" id="qzG-Yy-n2N"/>
                     <connections>
-                        <outlet property="settingsSubLabel" destination="HM5-6L-oE5" id="ih3-zb-Xdu"/>
-                        <outlet property="settingsTitleLabel" destination="IVt-tw-Jy1" id="bb6-oZ-Vbx"/>
+                        <outlet property="subLabel" destination="HM5-6L-oE5" id="fP3-Mc-ZhO"/>
+                        <outlet property="titleLabel" destination="IVt-tw-Jy1" id="SEZ-7S-gHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LE1-Zd-XLw" sceneMemberID="firstResponder"/>
@@ -157,14 +157,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page is not Implemented yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-c9-fLv">
-                                <rect key="frame" x="51" y="246.5" width="273" height="22.5"/>
+                                <rect key="frame" x="51" y="301" width="273" height="22.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Articles" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-i8-R8v">
-                                <rect key="frame" x="138.5" y="199.5" width="98" height="30"/>
+                                <rect key="frame" x="138" y="262" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="26"/>
@@ -178,8 +178,8 @@
                     <tabBarItem key="tabBarItem" title="Articles" image="un-articles" selectedImage="articles" id="Qr6-qq-VaX"/>
                     <navigationItem key="navigationItem" id="R3k-20-XJi"/>
                     <connections>
-                        <outlet property="articlesSubLabel" destination="8sb-c9-fLv" id="Fa2-0p-4BW"/>
-                        <outlet property="articlesTitleLabel" destination="F9b-i8-R8v" id="PCs-j7-0oW"/>
+                        <outlet property="subLabel" destination="8sb-c9-fLv" id="Fgl-p7-1l7"/>
+                        <outlet property="titleLabel" destination="F9b-i8-R8v" id="cjo-Sm-q0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpB-Nu-lMb" sceneMemberID="firstResponder"/>

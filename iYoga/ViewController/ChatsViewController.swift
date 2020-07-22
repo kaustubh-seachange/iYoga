@@ -9,10 +9,9 @@
 import UIKit
 
 class ChatsViewController: UIViewController {
-
     
-    @IBOutlet var chatsTitleLabel: UILabel!
-    @IBOutlet var chatsSubLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var subLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,6 @@ class ChatsViewController: UIViewController {
     
     override func loadView() {
         view = UIView()
-        //view.backgroundColor = UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0)
         view.backgroundColor = .white
         self.configureViews()
     }
@@ -30,25 +28,24 @@ class ChatsViewController: UIViewController {
     // MARK: This method will configure View Controller Component(s)
     func configureViews() {
         self.loggerMin("")
-        chatsTitleLabel = UILabel()
-        chatsTitleLabel.text = Constants.iYChatsTitle
-        chatsTitleLabel.font = UIFont.init(name: "Ubuntu-Bold", size: 26.0)
-        chatsTitleLabel.textColor = .firstColorOption
-        chatsTitleLabel.textAlignment = .center
-        self.view.addSubview(chatsTitleLabel)
-        chatsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        chatsTitleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        chatsTitleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        titleLabel = UILabel()
+        titleLabel.text = Constants.labelTexts.iYChatsTitle
+        titleLabel.font = UIFont.init(name: "Ubuntu-Bold", size: 26.0)
+        titleLabel.textColor = .firstColorOption
+        titleLabel.textAlignment = .center
+        self.view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
 
-        chatsSubLabel = UILabel()
-        chatsSubLabel.text = Constants.iYPageNotImplemented
-        chatsSubLabel.font = UIFont.init(name: "Ubuntu", size: 20.0)
-        chatsSubLabel.textColor = .secondColorOption
-        chatsSubLabel.textAlignment = .center
-        self.view.addSubview(chatsSubLabel)
-        chatsSubLabel.translatesAutoresizingMaskIntoConstraints = false
-        chatsSubLabel.centerXAnchor.constraint(equalTo: chatsTitleLabel.centerXAnchor).isActive = true
-        chatsSubLabel.topAnchor.constraint(equalTo: chatsTitleLabel.bottomAnchor,
-                                           constant: 10).isActive = true
+        subLabel = UILabel()
+        subLabel.text = Constants.labelTexts.iYPageNotImplemented
+        subLabel.font = UIFont.init(name: "Ubuntu", size: 20.0)
+        subLabel.textColor = .secondColorOption
+        subLabel.textAlignment = .center
+        self.view.addSubview(subLabel)
+        subLabel.translatesAutoresizingMaskIntoConstraints = false
+        subLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
+        subLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
     }
 }

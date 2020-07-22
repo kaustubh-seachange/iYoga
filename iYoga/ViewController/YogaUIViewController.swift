@@ -66,7 +66,7 @@ class YogaUIViewController: UIViewController {
     // MARK: - LayoutView(s).
     override func viewDidLayoutSubviews() {
         self.loggerMin("")
-        topImageView.bottomRoundView(cornerRadius: 40.0)
+        self.topImageView.bottomCornersRounded(cornerRadius: 38.0)
     }
     
     // MARK: - View Configuration
@@ -128,7 +128,7 @@ class YogaUIViewController: UIViewController {
         self.loggerMin("")
         ratingSubView = UIView()
         ratingSubView.backgroundColor = .white
-        ratingSubView.layer.cornerRadius = 40
+        ratingSubView.layer.cornerRadius = 38
         ratingSubView.clipsToBounds = true
         topView.addSubview(ratingSubView)
         ratingSubView.translatesAutoresizingMaskIntoConstraints = false
@@ -138,7 +138,7 @@ class YogaUIViewController: UIViewController {
         ratingSubView.heightAnchor.constraint(equalToConstant: 76).isActive = true
         
         ratingLabel = UILabel()
-        ratingLabel.text = Constants.iYRatingLabel
+        ratingLabel.text = Constants.labelTexts.iYRatingLabel
         ratingLabel.textAlignment = .left
         ratingLabel.font = UIFont.init(name: "Ubuntu", size: 14.0)
         ratingLabel.textColor = .black
@@ -173,7 +173,7 @@ class YogaUIViewController: UIViewController {
         }
         
         let ratingValuelabel = UILabel()
-        ratingValuelabel.text = Constants.iYRatingValueLabel
+        ratingValuelabel.text = Constants.labelTexts.iYRatingValueLabel
         ratingValuelabel.font = UIFont.init(name: "Ubuntu", size: 15.0)
         ratingValuelabel.textColor = .firstColorOption
         ratingValuelabel.textAlignment = .center
@@ -263,7 +263,7 @@ class YogaUIViewController: UIViewController {
     func configureSubViewsInBottomTopView() {
         self.loggerMin("")
         locationNameLabel = UILabel()
-        locationNameLabel.text = Constants.iYLocationNameLabel
+        locationNameLabel.text = Constants.labelTexts.iYLocationNameLabel
         locationNameLabel.font = UIFont.init(name: "Ubuntu", size: 20.0)
         locationNameLabel.backgroundColor = .clear
         locationNameLabel.textColor = .black
@@ -294,7 +294,7 @@ class YogaUIViewController: UIViewController {
         locationButton.heightAnchor.constraint(equalToConstant: 16).isActive = true
         
         locationDetailLabel = UILabel()
-        locationDetailLabel.text = Constants.iYLocationDetailLabel
+        locationDetailLabel.text = Constants.labelTexts.iYLocationDetailLabel
         locationDetailLabel.font = UIFont.init(name: "Ubuntu", size: 14.0)
         locationDetailLabel.textColor = .thirdColorOption
         locationDetailLabel.backgroundColor = .clear
@@ -313,7 +313,7 @@ class YogaUIViewController: UIViewController {
     func configureLocateOnMapButton() {
         self.loggerMin("")
         locateOnMapButton = UIButton()
-        locateOnMapButton.setTitle(Constants.iYLocateOnMapButton, for: .normal)
+        locateOnMapButton.setTitle(Constants.btnTexts.iYLocateOnMapButton, for: .normal)
         locateOnMapButton.setTitleColor(.firstColorOption, for: .normal)
         locateOnMapButton.titleLabel?.font = UIFont.init(name: "Ubuntu", size: 16.0)
         locateOnMapButton.backgroundColor = .clear
@@ -348,7 +348,7 @@ class YogaUIViewController: UIViewController {
                                                     constant: -10).isActive = true
         // Configure WeekdayLabel.
         weekdayLabel = UILabel()
-        weekdayLabel.text = Constants.iYWeekdaysLabel
+        weekdayLabel.text = Constants.labelTexts.iYWeekdaysLabel
         weekdayLabel.textAlignment = .left
         weekdayLabel.font = UIFont.init(name: "Ubuntu", size: 14.0)
         weekdayLabel.textColor = .black
@@ -363,7 +363,7 @@ class YogaUIViewController: UIViewController {
         
         // Configure weekday Timing Label.
         weekdayTimingLabel = UILabel()
-        weekdayTimingLabel.text = Constants.iYWeekdaysTimingLabel
+        weekdayTimingLabel.text = Constants.labelTexts.iYWeekdaysTimingLabel
         weekdayTimingLabel.textAlignment = .left
         weekdayTimingLabel.font = UIFont.init(name: "Ubuntu", size: 12.0)
         weekdayTimingLabel.textColor = .black
@@ -393,7 +393,7 @@ class YogaUIViewController: UIViewController {
                                                      constant: -10).isActive = true
     
         weekendLabel = UILabel()
-        weekendLabel.text = Constants.iYWeekendLabel
+        weekendLabel.text = Constants.labelTexts.iYWeekendLabel
         weekendLabel.textAlignment = .right
         weekendLabel.font = UIFont.init(name: "Ubuntu", size: 14.0)
         weekendLabel.textColor = .black
@@ -407,7 +407,7 @@ class YogaUIViewController: UIViewController {
         weekendLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         weekendTimingLabel = UILabel()
-        weekendTimingLabel.text = Constants.iYWeekendTimingLabel
+        weekendTimingLabel.text = Constants.labelTexts.iYWeekendTimingLabel
         weekendTimingLabel.textAlignment = .right
         weekendTimingLabel.font = UIFont.init(name: "Ubuntu", size: 12.0)
         weekendTimingLabel.textColor = .black
@@ -424,7 +424,7 @@ class YogaUIViewController: UIViewController {
     func configureLocationStatusView() {
         self.loggerMin("")
         locationStatus = UILabel()
-        locationStatus.text = Constants.iYLocationStatusLabel
+        locationStatus.text = Constants.labelTexts.iYLocationStatusLabel
         locationStatus.textAlignment = .left
         locationStatus.font = UIFont.init(name: "Ubuntu", size: 16.0)
         locationStatus.backgroundColor = .clear
@@ -460,7 +460,7 @@ class YogaUIViewController: UIViewController {
     func configureSubViewsInBottomBottomView() {
         self.loggerMin("")
         descriptionLabel = UILabel()
-        descriptionLabel.text = Constants.iYDescriptionLabel
+        descriptionLabel.text = Constants.labelTexts.iYDescriptionLabel
         descriptionLabel.font = UIFont.init(name: "Ubuntu", size: 14.0)
         descriptionLabel.backgroundColor = .clear
         descriptionLabel.textColor = .black
@@ -476,7 +476,7 @@ class YogaUIViewController: UIViewController {
         descriptionLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         descriptionDetailsTxtView = UITextView()
-        descriptionDetailsTxtView.text = Constants.iYDescriptionDetailTxtView
+        descriptionDetailsTxtView.text = Constants.txtViewTexts.iYDescriptionDetailTxtView
         descriptionDetailsTxtView.isUserInteractionEnabled = false
         descriptionDetailsTxtView.textAlignment = .justified
         descriptionDetailsTxtView.font = UIFont.init(name: "Ubuntu", size: 12.0)
@@ -499,7 +499,7 @@ class YogaUIViewController: UIViewController {
         reviewButton.tintColor = .firstColorOption
         let reviewimage = UIImage(named: "review")?.withRenderingMode(.automatic)
         reviewButton.setImage(reviewimage, for: .normal)
-        reviewButton.setTitle(Constants.iYReviewsButton, for: .normal)
+        reviewButton.setTitle(Constants.btnTexts.iYReviewsButton, for: .normal)
         reviewButton.setTitleColor(.firstColorOption, for: .normal)
         reviewButton.titleLabel?.font = UIFont.init(name: "Ubuntu", size: 14.0)
         reviewButton.backgroundColor = .clear
@@ -531,7 +531,6 @@ class YogaUIViewController: UIViewController {
     }
     
     @objc func handleTapGesture(sender: UITapGestureRecognizer){
-        self.loggerMin("")
         self.isTabBarSlideUp = (self.isTabBarSlideUp) ? false : true
         self.tabBarController?.slideTabBar(isUp: self.isTabBarSlideUp, animated: true)
     }

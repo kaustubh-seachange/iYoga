@@ -31,7 +31,7 @@ extension UIColor {
 }
 
 extension UIImageView {
-    func bottomRoundView(cornerRadius: CGFloat) {
+    func bottomCornersRounded(cornerRadius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds,
                                 byRoundingCorners: [.bottomLeft, .bottomRight],
                                 cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
@@ -39,6 +39,25 @@ extension UIImageView {
         maskLayer.frame = self.bounds
         maskLayer.path = path.cgPath
         self.layer.mask = maskLayer
+    }
+}
+
+extension UITabBar {
+    func topCornersRounded(cornerRadius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds,
+                                byRoundingCorners: [.topLeft, .topRight],
+                                cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
+        shapeLayer.path = path.cgPath
+        shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer.fillColor = UIColor.white.cgColor
+        shapeLayer.lineWidth = 1.0
+        shapeLayer.shadowOffset = CGSize(width:0, height:0)
+        shapeLayer.shadowRadius = 6
+        shapeLayer.shadowColor = UIColor.black.cgColor
+        shapeLayer.shadowOpacity = 0.2
+        self.layer.mask = shapeLayer
     }
 }
 
