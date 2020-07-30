@@ -128,6 +128,8 @@ class YogaUIViewController: UIViewController {
         self.loggerMin("")
         ratingSubView = UIView()
         ratingSubView.backgroundColor = .white
+        ratingSubView.layer.borderColor = UIColor.lightGray.cgColor
+        ratingSubView.layer.borderWidth = 1.0
         ratingSubView.layer.cornerRadius = 38
         ratingSubView.clipsToBounds = true
         topView.addSubview(ratingSubView)
@@ -200,6 +202,8 @@ class YogaUIViewController: UIViewController {
         favouriteButton.centerYAnchor.constraint(equalTo: ratingSubView.centerYAnchor).isActive = true
         favouriteButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
         favouriteButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        self.configureVerticalLine(aView: favouriteButton)
     }
     
     // MARK: - Configure BottomView.
@@ -440,10 +444,10 @@ class YogaUIViewController: UIViewController {
                                               constant: -20).isActive = true
         locationStatus.heightAnchor.constraint(equalToConstant: 28).isActive = true
         
-        self.configureLine(aView: locationStatus)
+        self.configureHorizontalLine(aView: locationStatus)
     }
     
-    func configureLine(aView: UIView) {
+    func configureHorizontalLine(aView: UIView) {
         self.loggerMin("")
         let lineView = UIView()
         lineView.backgroundColor = .lightGray
@@ -454,6 +458,19 @@ class YogaUIViewController: UIViewController {
         lineView.leftAnchor.constraint(equalTo: aView.leftAnchor).isActive = true
         lineView.widthAnchor.constraint(equalTo: aView.widthAnchor).isActive = true
         lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+    }
+    
+    func configureVerticalLine(aView: UIView) {
+        self.loggerMin("")
+        let verticallineView = UIView()
+        verticallineView.backgroundColor = .firstColorOption
+        verticallineView.clipsToBounds = true
+        ratingSubView.addSubview(verticallineView)
+        verticallineView.translatesAutoresizingMaskIntoConstraints = false
+        verticallineView.leftAnchor.constraint(equalTo: aView.leftAnchor, constant: -20).isActive = true
+        verticallineView.topAnchor.constraint(equalTo: aView.topAnchor, constant: -4).isActive = true
+        verticallineView.widthAnchor.constraint(equalToConstant: 1).isActive = true
+        verticallineView.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
 
     // MARK: Configure Bottom Bottom subView(s)
@@ -490,7 +507,7 @@ class YogaUIViewController: UIViewController {
         descriptionDetailsTxtView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor).isActive = true
         descriptionDetailsTxtView.rightAnchor.constraint(equalTo: descriptionLabel.rightAnchor).isActive = true
         descriptionDetailsTxtView.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        self.configureLine(aView: descriptionDetailsTxtView)
+        self.configureHorizontalLine(aView: descriptionDetailsTxtView)
     }
 
     func configureReviewButton() {

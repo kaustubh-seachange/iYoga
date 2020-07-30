@@ -67,7 +67,7 @@ extension UITabBarController {
         let aHeight = aFrame.size.height
         let offsetY = (isUp ? -aHeight : aHeight)
         UIView.animate(withDuration: animated ? 0.3 : 0.0) {
-            self.tabBar.frame = aFrame.offsetBy(dx: 0, dy: 2*offsetY)
+            self.tabBar.frame = aFrame.offsetBy(dx: 0, dy: 2.0*offsetY)
             self.tabBar.setNeedsDisplay()
             self.tabBar.layoutIfNeeded()
         }
