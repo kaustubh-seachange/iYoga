@@ -1,6 +1,6 @@
 language:
   - swift
-osx_image: xcode9
+osx_image: xcode11.5
 script:
   - xcodebuild -scheme iYoga -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=13.5' build test
 after_success:
