@@ -29,4 +29,3 @@ cd iYoga
 ```
 
 ### For Comments and Technical Suggestions.
-Please reach out to kaustubh.pnj@gmail.com or https://www.github.com/kaustubh-seachange
