@@ -33,7 +33,7 @@ class iYogaUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testGameStyleSwitch() {
+    /*func testGameStyleSwitch() {
       // given
       let slideButton = app.buttons.buttons["Slide"]
       let typeButton = app.segmentedControls.buttons["Type"]
@@ -56,7 +56,7 @@ class iYogaUITests: XCTestCase {
         XCTAssertTrue(slideLabel.exists)
         XCTAssertFalse(typeLabel.exists)
       }
-    }
+    } */
     
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
